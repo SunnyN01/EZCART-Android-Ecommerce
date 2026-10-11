@@ -1,45 +1,59 @@
-EZCART – Android E-Commerce Application
+# EZCART – Android E-Commerce Application
 
-EZCART is an Android shopping application built with Kotlin and Jetpack Compose. It provides product discovery, search, category filtering, cart management, checkout, and order history with persistent local storage.
+EZCART is a native Android shopping application built with **Kotlin, Jetpack Compose, MVVM, and Room**. It demonstrates end-to-end shopping workflows, reactive UI development, and persistent local data storage.
 
-Features
-Product Catalog: Browse products with images, categories, and prices.
-Search and Filtering: Find products by name and filter by category.
-Shopping Cart: Add products, update quantities, and remove items.
-Checkout: Review order totals and complete a simulated checkout flow.
-Order History: Store orders and order items locally and view previous purchases.
-Receipts: Display order details and purchase summaries.
-Offline Persistence: Store products, cart items, and orders using Room and SQLite.
-Modern UI: Use Jetpack Compose and Material 3 with light and dark themes.
-Technology Stack
-Language: Kotlin
-UI: Jetpack Compose, Material 3
-Architecture: Model–View–ViewModel (MVVM)
-Database: Room, SQLite
-Asynchronous Programming: Kotlin Coroutines and Flow
-Product Images: Coil
-Development Environment: Android Studio
-Architecture
+## Features
 
-The application separates its responsibilities into layers:
+- **Product Catalog:** Browse products with images, categories, and prices.
+- **Search and Filtering:** Search products by name and filter by category.
+- **Shopping Cart:** Add products, update quantities, and remove items.
+- **Checkout:** Review order details and totals through a simulated checkout flow.
+- **Order History:** Persist orders and associated order items and view previous purchases.
+- **Receipts:** Display order details and purchase summaries after checkout.
+- **Offline Persistence:** Store product, cart, and order data locally using Room and SQLite.
+- **Modern UI:** Build responsive shopping screens with Jetpack Compose and Material 3, including light and dark themes.
 
-UI: Compose screens for the home page, cart, checkout, receipts, and order history.
-ViewModel: Manages screen state and coordinates UI actions.
-Repository: Provides access to application data.
-Database: Room entities and DAOs persist products, cart items, orders, and order items.
-Getting Started
-Clone this repository.
-Open the project in Android Studio.
-Allow Gradle to sync.
-Run the app on an Android emulator or compatible device.
-Checkout Note
+## Technology Stack
 
-Checkout uses a simulated payment flow. A real payment gateway is not currently integrated.
+| Category | Technologies |
+|---|---|
+| Language | Kotlin |
+| UI | Jetpack Compose, Material 3 |
+| Architecture | MVVM, Repository Pattern |
+| Database | Room, SQLite |
+| Asynchronous Programming | Kotlin Coroutines, Flow |
+| Image Loading | Coil |
+| Development Tools | Android Studio, Gradle |
 
-Future Improvements
-Integrate a real payment provider.
-Add automated unit and UI tests.
-Improve product data sourcing and catalog management.
-Author
+## Architecture
 
-Developed as an Android application project demonstrating Kotlin, Jetpack Compose, MVVM, and local database persistence.
+The application separates UI, business logic, and data persistence into distinct layers:
+
+- **UI Layer:** Compose screens for product browsing, cart management, checkout, receipts, and order history.
+- **ViewModel Layer:** Manages screen state and coordinates user actions using observable UI state.
+- **Repository Layer:** Centralizes access to product, cart, and order data.
+- **Database Layer:** Uses Room entities and DAOs to persist products, cart items, orders, and order items in a local SQLite database.
+
+This structure improves separation of concerns and makes the application easier to maintain and extend.
+
+## Getting Started
+
+1. Clone this repository.
+2. Open the project in Android Studio.
+3. Allow Gradle to sync and resolve dependencies.
+4. Run the application on an Android emulator or compatible Android device.
+
+## Checkout and Payments
+
+Checkout currently uses a **simulated payment flow**. A production payment gateway is not integrated.
+
+## Future Improvements
+
+- Integrate a payment provider.
+- Add automated unit and UI tests.
+- Improve product data sourcing and catalog management.
+- Explore remote API integration while retaining local persistence.
+
+## Author
+
+Developed as an Android application project demonstrating native Android development, modern UI architecture, and local database persistence.
